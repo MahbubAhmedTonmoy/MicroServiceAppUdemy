@@ -1,0 +1,29 @@
+version: '3.4'
+
+services:
+  catalog.api:
+    image: catalogapi:dev
+    build:
+      target: base
+      labels:
+        com.microsoft.created-by: "visual-studio"
+        com.microsoft.visual-studio.project-name: "Catalog.API"
+    environment:
+      - DOTNET_USE_POLLING_FILE_WATCHER=1
+      - NUGET_PACKAGES=C:\.nuget\packages
+      - ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS=true
+      - NUGET_FALLBACK_PACKAGES=
+    volumes:
+      - C:\Users\ahmed.mahbub\Desktop\MicroServiceAppUdemy\MicroServicesApp\src\Catalog\Catalog.API:C:\app
+      - C:\Users\ahmed.mahbub\Desktop\MicroServiceAppUdemy\MicroServicesApp:C:\src
+      - C:\Users\ahmed.mahbub\onecoremsvsmon\16.5.0102.0:C:\remote_debugger:ro
+      - C:\Users\ahmed.mahbub\.nuget\packages\:c:\.nuget\packages:ro
+      - ${APPDATA}/ASP.NET/Https:C:\Users\ContainerUser\AppData\Roaming\ASP.NET\Https:ro
+      - ${APPDATA}/Microsoft/UserSecrets:C:\Users\ContainerUser\AppData\Roaming\Microsoft\UserSecrets:ro
+
+    entrypoint: C:\\remote_debugger\\x64\\msvsmon.exe /noauth /anyuser /silent /nostatus /noclrwarn /nosecuritywarn /nofirewallwarn /nowowwarn /timeout:2147483646 /LogDebuggeeOutputToStdOut
+    labels:
+      com.microsoft.visualstudio.debuggee.program: "\"C:\\Program Files\\dotnet\\dotnet.exe\""
+      com.microsoft.visualstudio.debuggee.arguments: " --additionalProbingPath c:\\.nuget\\packages  \"C:\\app\\bin\\Debug\\netcoreapp3.1\\Catalog.API.dll\""
+      com.microsoft.visualstudio.debuggee.workingdirectory: "C:\\app"
+      com.microsoft.visualstudio.debuggee.killprogram: "C:\\remote_debugger\\x64\\utils\\KillProcess.exe dotnet.exe"
