@@ -2,12 +2,13 @@ services:
   catalog.api:
     build:
       context: C:\Users\ahmed.mahbub\Desktop\MicroServiceAppUdemy\MicroServicesApp
-      dockerfile: src/Catalog/Catalog.API/Dockerfile
+      dockerfile: src\Catalog\Catalog.API\Dockerfile
+    container_name: catalogapi
     depends_on:
     - catalogdb
     environment:
       ASPNETCORE_ENVIRONMENT: Development
-      CatalogDatabaseSettings:ConnectionString: mongodb://catalogdb:27018
+      CatalogDatabaseSettings:ConnectionString: mongodb://catalogdb:27017
     image: catalogapi
     ports:
     - published: 8000
