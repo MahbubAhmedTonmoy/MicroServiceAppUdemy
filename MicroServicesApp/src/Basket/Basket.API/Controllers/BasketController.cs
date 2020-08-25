@@ -1,4 +1,7 @@
-﻿using System.Net;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
 using Basket.API.Entities;
 using Basket.API.Repositories;
@@ -9,13 +12,13 @@ namespace Basket.API.Controllers
 {
     [ApiController]
     [Route("api/v1/[controller]")]
-    public class BaskettController : ControllerBase
+    public class BasketController : ControllerBase
     {
         private readonly IBasketRepository _repository;
 
-        private readonly ILogger<BaskettController> _logger;
+        private readonly ILogger<BasketController> _logger;
 
-        public BaskettController(ILogger<BaskettController> logger, IBasketRepository repository)
+        public BasketController(ILogger<BasketController> logger, IBasketRepository repository)
         {
             _logger = logger;
             _repository = repository;
@@ -44,3 +47,4 @@ namespace Basket.API.Controllers
         }
     }
 }
+

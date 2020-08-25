@@ -1066,11 +1066,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ahmed.mahbub\\Desktop\\MicroServiceAppUdemy\\src\\Basket\\Basket.API\\Basket.API.csproj",
+      "projectUniqueName": "C:\\Users\\ahmed.mahbub\\Desktop\\MicroServiceAppUdemy\\MicroServicesApp\\src\\Basket\\Basket.API\\Basket.API.csproj",
       "projectName": "Basket.API",
-      "projectPath": "C:\\Users\\ahmed.mahbub\\Desktop\\MicroServiceAppUdemy\\src\\Basket\\Basket.API\\Basket.API.csproj",
+      "projectPath": "C:\\Users\\ahmed.mahbub\\Desktop\\MicroServiceAppUdemy\\MicroServicesApp\\src\\Basket\\Basket.API\\Basket.API.csproj",
       "packagesPath": "C:\\Users\\ahmed.mahbub\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ahmed.mahbub\\Desktop\\MicroServiceAppUdemy\\src\\Basket\\Basket.API\\obj\\",
+      "outputPath": "C:\\Users\\ahmed.mahbub\\Desktop\\MicroServiceAppUdemy\\MicroServicesApp\\src\\Basket\\Basket.API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ahmed.mahbub\\AppData\\Roaming\\NuGet\\NuGet.Config",
