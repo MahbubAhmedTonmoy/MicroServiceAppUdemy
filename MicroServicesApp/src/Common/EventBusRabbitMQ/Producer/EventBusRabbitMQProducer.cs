@@ -8,29 +8,31 @@ namespace EventBusRabbitMQ
 {
     public class EventBusRabbitMQProducer
     {
-        private readonly IRabbitMQConnection _rabbitMQConnection;
-        public EventBusRabbitMQProducer(IRabbitMQConnection rabbitMQConnection)
+        private readonly IRabbitMQConnection _connection;
+
+        public EventBusRabbitMQProducer(IRabbitMQConnection connection)
         {
-            _rabbitMQConnection = rabbitMQConnection;
+            _connection = connection ?? throw new ArgumentNullException(nameof(connection));
         }
 
-        public void PublishBasketCheckOut(string queueName, BasketCheckoutEvent basketCheckoutEvent)
+        public void PublishBasketCheckout(string queueName, BasketCheckoutEvent publishModel)
         {
-            using (var channel = _rabbitMQConnection.CreateModel())
+            using (var channel = _connection.CreateModel())
             {
-                channel.QueueDeclare(queue: queueName, durable: false, autoDelete: false, arguments: null);
-                var message = JsonConvert.SerializeObject(basketCheckoutEvent);
+                channel.QueueDeclare(queue: queueName, durable: false, exclusive: false, autoDelete: false, arguments: null);
+                var message = JsonConvert.SerializeObject(publishModel);
                 var body = Encoding.UTF8.GetBytes(message);
 
-                IBasicProperties basicProperties = channel.CreateBasicProperties();
-                basicProperties.Persistent = true;
-                basicProperties.DeliveryMode = 2;
+                IBasicProperties properties = channel.CreateBasicProperties();
+                properties.Persistent = true;
+                properties.DeliveryMode = 2;
 
                 channel.ConfirmSelect();
-                channel.BasicPublish("", queueName, true, basicProperties, body);
+                channel.BasicPublish(exchange: "", routingKey: queueName, mandatory: true, basicProperties: properties, body: body);
                 channel.WaitForConfirmsOrDie();
 
-                channel.BasicAcks += (sender, eventArgs) => {
+                channel.BasicAcks += (sender, eventArgs) =>
+                {
                     Console.WriteLine("Sent RabbitMQ");
                     //implement ack handle
                 };

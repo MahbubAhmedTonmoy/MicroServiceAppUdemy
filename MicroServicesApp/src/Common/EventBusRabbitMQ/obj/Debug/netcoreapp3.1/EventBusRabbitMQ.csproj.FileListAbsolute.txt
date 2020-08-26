@@ -3,3 +3,7 @@ C:\Users\ahmed.mahbub\Desktop\MicroServiceAppUdemy\MicroServicesApp\src\Common\E
 C:\Users\ahmed.mahbub\Desktop\MicroServiceAppUdemy\MicroServicesApp\src\Common\EventBusRabbitMQ\obj\Debug\netcoreapp3.1\EventBusRabbitMQ.csprojAssemblyReference.cache
 C:\Users\ahmed.mahbub\Desktop\MicroServiceAppUdemy\MicroServicesApp\src\Common\EventBusRabbitMQ\obj\Debug\netcoreapp3.1\EventBusRabbitMQ.AssemblyInfoInputs.cache
 C:\Users\ahmed.mahbub\Desktop\MicroServiceAppUdemy\MicroServicesApp\src\Common\EventBusRabbitMQ\obj\Debug\netcoreapp3.1\EventBusRabbitMQ.AssemblyInfo.cs
+C:\Users\ahmed.mahbub\Desktop\MicroServiceAppUdemy\MicroServicesApp\src\Common\EventBusRabbitMQ\bin\Debug\netcoreapp3.1\EventBusRabbitMQ.pdb
+C:\Users\ahmed.mahbub\Desktop\MicroServiceAppUdemy\MicroServicesApp\src\Common\EventBusRabbitMQ\obj\Debug\netcoreapp3.1\EventBusRabbitMQ.csproj.CoreCompileInputs.cache
+C:\Users\ahmed.mahbub\Desktop\MicroServiceAppUdemy\MicroServicesApp\src\Common\EventBusRabbitMQ\obj\Debug\netcoreapp3.1\EventBusRabbitMQ.dll
+C:\Users\ahmed.mahbub\Desktop\MicroServiceAppUdemy\MicroServicesApp\src\Common\EventBusRabbitMQ\obj\Debug\netcoreapp3.1\EventBusRabbitMQ.pdb

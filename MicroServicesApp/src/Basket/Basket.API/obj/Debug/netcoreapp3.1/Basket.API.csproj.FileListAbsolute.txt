@@ -35,3 +35,9 @@ C:\Users\ahmed.mahbub\Desktop\MicroServiceAppUdemy\MicroServicesApp\src\Basket\B
 C:\Users\ahmed.mahbub\Desktop\MicroServiceAppUdemy\MicroServicesApp\src\Basket\Basket.API\obj\Debug\netcoreapp3.1\Basket.API.genruntimeconfig.cache
 C:\Users\ahmed.mahbub\Desktop\MicroServiceAppUdemy\MicroServicesApp\src\Basket\Basket.API\bin\Debug\netcoreapp3.1\RabbitMQ.Client.dll
 C:\Users\ahmed.mahbub\Desktop\MicroServiceAppUdemy\MicroServicesApp\src\Basket\Basket.API\bin\Debug\netcoreapp3.1\EventBusRabbitMQ.dll
+C:\Users\ahmed.mahbub\Desktop\MicroServiceAppUdemy\MicroServicesApp\src\Basket\Basket.API\bin\Debug\netcoreapp3.1\AutoMapper.dll
+C:\Users\ahmed.mahbub\Desktop\MicroServiceAppUdemy\MicroServicesApp\src\Basket\Basket.API\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\ahmed.mahbub\Desktop\MicroServiceAppUdemy\MicroServicesApp\src\Basket\Basket.API\bin\Debug\netcoreapp3.1\EventBusRabbitMQ.pdb
+C:\Users\ahmed.mahbub\Desktop\MicroServiceAppUdemy\MicroServicesApp\src\Basket\Basket.API\obj\Debug\netcoreapp3.1\Basket.API.csproj.CoreCompileInputs.cache
+C:\Users\ahmed.mahbub\Desktop\MicroServiceAppUdemy\MicroServicesApp\src\Basket\Basket.API\obj\Debug\netcoreapp3.1\Basket.API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\ahmed.mahbub\Desktop\MicroServiceAppUdemy\MicroServicesApp\src\Basket\Basket.API\obj\Debug\netcoreapp3.1\Basket.API.MvcApplicationPartsAssemblyInfo.cache

@@ -73,7 +73,7 @@ namespace Basket.API.Controllers
 
             try
             {
-                _rabbitMQProducer.PublishBasketCheckOut(EventBusConstants.BasketCheckoutQueue, eventMessage);
+                _rabbitMQProducer.PublishBasketCheckout(EventBusConstants.BasketCheckoutQueue, eventMessage);
             }
             catch (Exception ex)
             {
