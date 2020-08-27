@@ -4,8 +4,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Ordering.Infrastructure.Data;
 
 namespace Ordering.API
 {
@@ -13,7 +15,28 @@ namespace Ordering.API
     {
         public static void Main(string[] args)
         {
-            CreateHostBuilder(args).Build().Run();
+            var host = CreateHostBuilder(args).Build();
+            CreateAndSeedDB(host);
+            host.Run();
+        }
+
+        private static void CreateAndSeedDB(IHost host)
+        {
+            using(var scope = host.Services.CreateScope())
+            {
+                var services = scope.ServiceProvider;
+                try
+                {
+                    var dbContext = services.GetRequiredService<DataContext>();
+                    OrderSeedData.SeedAsync(dbContext);
+                }
+                catch (Exception ex)
+                {
+
+                    throw;
+                }
+
+            }
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
