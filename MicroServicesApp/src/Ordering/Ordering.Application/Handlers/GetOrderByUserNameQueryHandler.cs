@@ -1,8 +1,10 @@
 ﻿using AutoMapper;
 using FluentValidation;
 using MediatR;
+using Ordering.Application.Mapper;
 using Ordering.Application.Queries;
 using Ordering.Application.Responses;
+using Ordering.Core.Entities;
 using Ordering.Core.Repository;
 using System;
 using System.Collections.Generic;
@@ -23,9 +25,18 @@ namespace Ordering.Application.Handlers
         }
         public async Task<IEnumerable<OrderResponse>> Handle(GetOrderByUserNameQuery request, CancellationToken cancellationToken)
         {
-            var result = await _orderRepository.GetOrderByUserName(request.UserName);
-            var response = _mapper.Map<IEnumerable<OrderResponse>>(result);
-            return response;
+            try
+            {
+                var orderList = await _orderRepository.GetOrdersByUserName(request.UserName);
+
+                var orderResponseList = OrderMapper.Mapper.Map<IEnumerable<OrderResponse>>(orderList);
+                return orderResponseList;
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
         }
     }
 
