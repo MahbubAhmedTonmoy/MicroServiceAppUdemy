@@ -12,11 +12,11 @@ using System.Threading.Tasks;
 
 namespace Ordering.Application.Handlers
 {
-    public class GetOrderByUserNameHandler : IRequestHandler<GetOrderByUserNameQuery, IEnumerable<OrderResponse>>
+    public class GetOrderByUserNameQueryHandler : IRequestHandler<GetOrderByUserNameQuery, IEnumerable<OrderResponse>>
     {
         private readonly IOrderRepository _orderRepository;
         private readonly IMapper _mapper;
-        public GetOrderByUserNameHandler(IOrderRepository orderRepository, IMapper mapper)
+        public GetOrderByUserNameQueryHandler(IOrderRepository orderRepository, IMapper mapper)
         {
             _orderRepository = orderRepository;
             _mapper = mapper;

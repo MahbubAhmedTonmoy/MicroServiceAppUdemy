@@ -57,5 +57,15 @@ C:\Users\ahmed.mahbub\Desktop\MicroServiceAppUdemy\MicroServicesApp\src\Ordering
 C:\Users\ahmed.mahbub\Desktop\MicroServiceAppUdemy\MicroServicesApp\src\Ordering\Ordering.API\obj\Debug\netcoreapp3.1\Ordering.API.pdb
 C:\Users\ahmed.mahbub\Desktop\MicroServiceAppUdemy\MicroServicesApp\src\Ordering\Ordering.API\obj\Debug\netcoreapp3.1\Ordering.API.genruntimeconfig.cache
 C:\Users\ahmed.mahbub\Desktop\MicroServiceAppUdemy\MicroServicesApp\src\Ordering\Ordering.API\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\ahmed.mahbub\Desktop\MicroServiceAppUdemy\MicroServicesApp\src\Ordering\Ordering.API\bin\Debug\netcoreapp3.1\AutoMapper.dll
+C:\Users\ahmed.mahbub\Desktop\MicroServiceAppUdemy\MicroServicesApp\src\Ordering\Ordering.API\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\ahmed.mahbub\Desktop\MicroServiceAppUdemy\MicroServicesApp\src\Ordering\Ordering.API\bin\Debug\netcoreapp3.1\FluentValidation.dll
+C:\Users\ahmed.mahbub\Desktop\MicroServiceAppUdemy\MicroServicesApp\src\Ordering\Ordering.API\bin\Debug\netcoreapp3.1\MediatR.dll
+C:\Users\ahmed.mahbub\Desktop\MicroServiceAppUdemy\MicroServicesApp\src\Ordering\Ordering.API\bin\Debug\netcoreapp3.1\MediatR.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\ahmed.mahbub\Desktop\MicroServiceAppUdemy\MicroServicesApp\src\Ordering\Ordering.API\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+C:\Users\ahmed.mahbub\Desktop\MicroServiceAppUdemy\MicroServicesApp\src\Ordering\Ordering.API\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\ahmed.mahbub\Desktop\MicroServiceAppUdemy\MicroServicesApp\src\Ordering\Ordering.API\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\ahmed.mahbub\Desktop\MicroServiceAppUdemy\MicroServicesApp\src\Ordering\Ordering.API\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\ahmed.mahbub\Desktop\MicroServiceAppUdemy\MicroServicesApp\src\Ordering\Ordering.API\obj\Debug\netcoreapp3.1\Ordering.API.csproj.CoreCompileInputs.cache
+C:\Users\ahmed.mahbub\Desktop\MicroServiceAppUdemy\MicroServicesApp\src\Ordering\Ordering.API\obj\Debug\netcoreapp3.1\Ordering.API.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\ahmed.mahbub\Desktop\MicroServiceAppUdemy\MicroServicesApp\src\Ordering\Ordering.API\obj\Debug\netcoreapp3.1\Ordering.API.MvcApplicationPartsAssemblyInfo.cache
