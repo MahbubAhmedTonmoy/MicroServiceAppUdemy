@@ -5,7 +5,7 @@ services:
       dockerfile: src/Basket/Basket.API/Dockerfile
     container_name: basketapi
     depends_on:
-    - catalogdb
+    - basketdb
     - rabbitmq
     environment:
       ASPNETCORE_ENVIRONMENT: Development
@@ -51,6 +51,35 @@ services:
     restart: always
     volumes:
     - /site:/data/db:rw
+  orderdb:
+    container_name: orderdb
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: sa1234
+    image: mcr.microsoft.com/mssql/server
+    ports:
+    - published: 1433
+      target: 1433
+  ordering.api:
+    build:
+      context: C:\Users\ahmed.mahbub\Desktop\MicroServiceAppUdemy\MicroServicesApp
+      dockerfile: src/Ordering/Ordering.API/Dockerfile
+    container_name: orderingapi
+    depends_on:
+    - orderdb
+    - rabbitmq
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ConnectionStrings:OrderConnection: Server=orderdb;Database=OrderDb;User Id=sa;Password=sa1234
+      EventBus:HostName: rabbitmq
+    image: orderingapi
+    ports:
+    - published: 8002
+      target: 80
+    restart: on-failure
+    volumes:
+    - /.aspnet/https:/root/.aspnet/https/:rw
+    - /.microsoft/usersecrets:/root/.microsoft/usersecrets:rw
   rabbitmq:
     container_name: rabbitmq
     image: rabbitmq:3-management-alpine
