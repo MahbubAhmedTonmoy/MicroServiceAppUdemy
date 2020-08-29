@@ -73,7 +73,7 @@ services:
     container_name: orderdb
     environment:
       ACCEPT_EULA: "Y"
-      SA_PASSWORD: sa1234
+      SA_PASSWORD: SwN12345678
     image: mcr.microsoft.com/mssql/server
     ports:
     - published: 1433
