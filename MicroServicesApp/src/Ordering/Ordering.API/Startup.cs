@@ -45,6 +45,13 @@ namespace Ordering.API
 
             // Add MediatR
             services.AddMediatR(typeof(CheckoutOrderCommandHandler).GetTypeInfo().Assembly);
+
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Order API", Version = "v1" });
+            });
+
+
             services.AddSingleton<IRabbitMQConnection>(sp =>
             {
                 var factory = new ConnectionFactory()
@@ -65,10 +72,7 @@ namespace Ordering.API
                 return new RabbitMQConnection(factory);
             });
             services.AddSingleton<EventBusRabbitMQConsumer>();
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Order API", Version = "v1" });
-            });
+            
 
         }
 

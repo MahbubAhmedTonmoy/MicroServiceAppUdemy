@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ehOJzZRlSSMaLhX16gd4whP5fNQPhSnjwejHy3kps6dmS1RiSesZtk41whotUA3VIgfMC06xclMr0LCoH1lhyw==",
+  "dgSpecHash": "GZ3bitdThqSUiznaTdaJUN1kRobe1fs46wC8WIdCB2k2/YkCztOcUu7qrIZBXkYvZwEmZcXwKgZrWfitXdeajA==",
   "success": true,
   "projectFilePath": "C:\\Users\\ahmed.mahbub\\Desktop\\MicroServiceAppUdemy\\MicroServicesApp\\src\\Ordering\\Ordering.API\\Ordering.API.csproj",
   "expectedPackageFiles": [
@@ -36,6 +36,7 @@
     "C:\\Users\\ahmed.mahbub\\.nuget\\packages\\microsoft.netcore.platforms\\2.0.0\\microsoft.netcore.platforms.2.0.0.nupkg.sha512",
     "C:\\Users\\ahmed.mahbub\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\ahmed.mahbub\\.nuget\\packages\\microsoft.openapi\\1.1.4\\microsoft.openapi.1.1.4.nupkg.sha512",
+    "C:\\Users\\ahmed.mahbub\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.8\\microsoft.visualstudio.azure.containers.tools.targets.1.10.8.nupkg.sha512",
     "C:\\Users\\ahmed.mahbub\\.nuget\\packages\\microsoft.win32.registry\\4.5.0\\microsoft.win32.registry.4.5.0.nupkg.sha512",
     "C:\\Users\\ahmed.mahbub\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\ahmed.mahbub\\.nuget\\packages\\rabbitmq.client\\6.2.1\\rabbitmq.client.6.2.1.nupkg.sha512",
