@@ -1,4 +1,22 @@
 services:
+  apigateway:
+    build:
+      context: C:\Users\ahmed.mahbub\Desktop\MicroServiceAppUdemy\MicroServicesApp
+      dockerfile: src/ApiGateway/OcelotAPIGateway/Dockerfile
+    container_name: apigateway
+    depends_on:
+    - basket.api
+    - catalog.api
+    - ordering.api
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: apigateway
+    ports:
+    - published: 7000
+      target: 80
+    volumes:
+    - /.aspnet/https:/root/.aspnet/https/:rw
+    - /.microsoft/usersecrets:/root/.microsoft/usersecrets:rw
   basket.api:
     build:
       context: C:\Users\ahmed.mahbub\Desktop\MicroServiceAppUdemy\MicroServicesApp
@@ -70,7 +88,7 @@ services:
     - rabbitmq
     environment:
       ASPNETCORE_ENVIRONMENT: Development
-      ConnectionStrings:OrderConnection: Server=orderdb;Database=OrderDb;User Id=sa;Password=sa1234
+      ConnectionStrings:OrderConnection: Server=orderdb;Database=OrderDb;User Id=sa;Password=SwN12345678
       EventBus:HostName: rabbitmq
     image: orderingapi
     ports:
