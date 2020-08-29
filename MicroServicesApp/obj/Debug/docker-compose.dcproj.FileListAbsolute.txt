@@ -61,3 +61,13 @@ C:\Users\ahmed.mahbub\Desktop\MicroServiceAppUdemy\MicroServicesApp\bin\Debug\Or
 C:\Users\ahmed.mahbub\Desktop\MicroServiceAppUdemy\MicroServicesApp\bin\Debug\Ordering.Infrastructure.pdb
 C:\Users\ahmed.mahbub\Desktop\MicroServiceAppUdemy\MicroServicesApp\bin\Debug\Ordering.Core.pdb
 C:\Users\ahmed.mahbub\Desktop\MicroServiceAppUdemy\MicroServicesApp\bin\Debug\Ordering.Application.pdb
+C:\Users\ahmed.mahbub\Desktop\MicroServiceAppUdemy\MicroServicesApp\bin\Debug\ocelot.json
+C:\Users\ahmed.mahbub\Desktop\MicroServiceAppUdemy\MicroServicesApp\bin\Debug\OcelotAPIGateway.exe
+C:\Users\ahmed.mahbub\Desktop\MicroServiceAppUdemy\MicroServicesApp\bin\Debug\OcelotAPIGateway.dll
+C:\Users\ahmed.mahbub\Desktop\MicroServiceAppUdemy\MicroServicesApp\bin\Debug\Ocelot.dll
+C:\Users\ahmed.mahbub\Desktop\MicroServiceAppUdemy\MicroServicesApp\bin\Debug\Microsoft.Extensions.DiagnosticAdapter.dll
+C:\Users\ahmed.mahbub\Desktop\MicroServiceAppUdemy\MicroServicesApp\bin\Debug\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\ahmed.mahbub\Desktop\MicroServiceAppUdemy\MicroServicesApp\bin\Debug\Microsoft.AspNetCore.MiddlewareAnalysis.dll
+C:\Users\ahmed.mahbub\Desktop\MicroServiceAppUdemy\MicroServicesApp\bin\Debug\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\ahmed.mahbub\Desktop\MicroServiceAppUdemy\MicroServicesApp\bin\Debug\Newtonsoft.Json.Bson.dll
+C:\Users\ahmed.mahbub\Desktop\MicroServiceAppUdemy\MicroServicesApp\bin\Debug\OcelotAPIGateway.pdb
