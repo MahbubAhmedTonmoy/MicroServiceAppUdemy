@@ -73,8 +73,8 @@ services:
     container_name: orderdb
     environment:
       ACCEPT_EULA: "Y"
-      SA_PASSWORD: SwN12345678
-    image: mcr.microsoft.com/mssql/server
+      SA_PASSWORD: Password@12345
+    image: mcr.microsoft.com/mssql/server:2019-latest
     ports:
     - published: 1433
       target: 1433
@@ -88,7 +88,7 @@ services:
     - rabbitmq
     environment:
       ASPNETCORE_ENVIRONMENT: Development
-      ConnectionStrings:OrderConnection: Server=orderdb;Database=OrderDb;User Id=sa;Password=SwN12345678
+      ConnectionStrings:OrderConnection: Server=orderdb;Database=OrderDb;User Id=sa;Password=Password@12345
       EventBus:HostName: rabbitmq
     image: orderingapi
     ports:
