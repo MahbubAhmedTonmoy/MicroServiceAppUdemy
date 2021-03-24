@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "qflj++S6jmG87K9Rb/nh3ATd+1xR/7mWQ8qEovWIy2ZKQD/gfM1eLeasGoCEWN3A+TtYUgGv3UQ1ZfrfGMlS7Q==",
+  "dgSpecHash": "1GTl3VntAeURgqi4kdd/hbYMxrXmxYkh632IjMdCmEH4CvbGl0d64RJZyHKAG2ff9HX4mgi+li1YdL9YmtgZgg==",
   "success": true,
   "projectFilePath": "C:\\Users\\ahmed.mahbub\\Desktop\\MicroServiceAppUdemy\\MicroServicesApp\\src\\Common\\EventBusRabbitMQ\\EventBusRabbitMQ.csproj",
   "expectedPackageFiles": [

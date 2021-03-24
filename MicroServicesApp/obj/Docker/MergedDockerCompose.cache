@@ -5,9 +5,12 @@ services:
       dockerfile: src/ApiGateway/OcelotAPIGateway/Dockerfile
     container_name: apigateway
     depends_on:
-    - basket.api
-    - catalog.api
-    - ordering.api
+      basket.api:
+        condition: service_started
+      catalog.api:
+        condition: service_started
+      ordering.api:
+        condition: service_started
     environment:
       ASPNETCORE_ENVIRONMENT: Development
     image: apigateway
@@ -23,8 +26,10 @@ services:
       dockerfile: src/Basket/Basket.API/Dockerfile
     container_name: basketapi
     depends_on:
-    - basketdb
-    - rabbitmq
+      basketdb:
+        condition: service_started
+      rabbitmq:
+        condition: service_started
     environment:
       ASPNETCORE_ENVIRONMENT: Development
       ConnectionStrings:Redis: basketdb:6379
@@ -49,7 +54,8 @@ services:
       dockerfile: src/Catalog/Catalog.API/Dockerfile
     container_name: catalogapi
     depends_on:
-    - catalogdb
+      catalogdb:
+        condition: service_started
     environment:
       ASPNETCORE_ENVIRONMENT: Development
       CatalogDatabaseSettings:ConnectionString: mongodb://catalogdb:27017
@@ -84,8 +90,10 @@ services:
       dockerfile: src/Ordering/Ordering.API/Dockerfile
     container_name: orderingapi
     depends_on:
-    - orderdb
-    - rabbitmq
+      orderdb:
+        condition: service_started
+      rabbitmq:
+        condition: service_started
     environment:
       ASPNETCORE_ENVIRONMENT: Development
       ConnectionStrings:OrderConnection: Server=orderdb;Database=OrderDb;User Id=sa;Password=Password@12345

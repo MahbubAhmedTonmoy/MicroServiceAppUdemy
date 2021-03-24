@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "8NnxDkEfIujcOFBcfixZQGfBkkxCtKFnKlSH8GJ9arMOP/vWVVXkD1CpLLEXsClb27ZGZGh0VD4ssrevaszr4Q==",
+  "dgSpecHash": "58pDUGbB4AHQ3FNDUDUJGysGFjtlUpLVN+5814MCDgekglEwwlTrq6NXFC4WsVGp54BHIBlxcjwKp9Q8GC9YjQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\ahmed.mahbub\\Desktop\\MicroServiceAppUdemy\\MicroServicesApp\\src\\ApiGateway\\OcelotAPIGateway\\OcelotAPIGateway.csproj",
   "expectedPackageFiles": [
