@@ -3,35 +3,26 @@ version: '3.4'
 services:
   catalogdb:
     image: mongo
-  basketdb:
-    image: redis
-  orderdb:
-    image: mcr.microsoft.com/mssql/server:2019-latest
-  rabbitmq:
-    image: rabbitmq:3-management-alpine
+    container_name: catalogdb
+    restart: always
+    volumes:
+        - ${WEBAPP_STORAGE_HOME}/site:/data/db
+       #- ./data:/data/db
+    ports:
+        - "27018:27017"
+            
   catalog.api:
     image: ${DOCKER_REGISTRY-}catalogapi
     build:
       context: .
       dockerfile: src/Catalog/Catalog.API/Dockerfile
-
-  basket.api:
-    image: ${DOCKER_REGISTRY-}basketapi
-    build:
-      context: .
-      dockerfile: src/Basket/Basket.API/Dockerfile
-
-
-  ordering.api:
-    image: ${DOCKER_REGISTRY-}orderingapi
-    build:
-      context: .
-      dockerfile: src/Ordering/Ordering.API/Dockerfile
-
-
-  apigateway:
-    image: ${DOCKER_REGISTRY-}apigateway
-    build:
-      context: .
-      dockerfile: src/ApiGateway/OcelotAPIGateway/Dockerfile
-
+    environment:
+        - ASPNETCORE_ENVIRONMENT=Development
+        - "CatalogDatabaseSettings:ConnectionString=mongodb://catalogdb:27017"
+    depends_on:
+        - catalogdb
+    volumes:
+        - ${HOME}/.microsoft/usersecrets/:/root/.microsoft/usersecrets
+        - ${HOME}/.aspnet/https:/root/.aspnet/https/
+    ports:
+        - "8000:80"

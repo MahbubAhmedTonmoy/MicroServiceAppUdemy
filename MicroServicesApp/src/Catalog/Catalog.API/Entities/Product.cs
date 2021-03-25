@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace Catalog.API.Entities
 {
+    [BsonIgnoreExtraElements]
     public class Product
     {
         [BsonId]
-        [BsonRepresentation(BsonType.ObjectId)]
-        public string Id { get; set; }
+        public string Id { get; set; } = Guid.NewGuid().ToString();
         [BsonElement("Name")]
         public string Name { get; set; }
         public string Category { get; set; }

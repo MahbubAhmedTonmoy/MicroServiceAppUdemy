@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.1": {
+    "net5.0": {
       "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
         "type": "package",
         "compile": {
@@ -1295,7 +1295,7 @@
       },
       "Ordering.Core/1.0.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v3.1",
+        "framework": ".NETCoreApp,Version=v5.0",
         "compile": {
           "bin/placeholder/Ordering.Core.dll": {}
         },
@@ -5035,7 +5035,7 @@
     }
   },
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.1": [
+    "net5.0": [
       "Microsoft.EntityFrameworkCore >= 3.1.7",
       "Microsoft.EntityFrameworkCore.Design >= 3.1.7",
       "Microsoft.EntityFrameworkCore.InMemory >= 3.1.4",
@@ -5061,7 +5061,7 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "netcoreapp3.1"
+        "net5.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -5070,8 +5070,8 @@
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
+        "net5.0": {
+          "targetAlias": "net5.0",
           "projectReferences": {
             "C:\\Users\\ahmed.mahbub\\Desktop\\MicroServiceAppUdemy\\MicroServicesApp\\src\\Ordering\\Ordering.Core\\Ordering.Core.csproj": {
               "projectPath": "C:\\Users\\ahmed.mahbub\\Desktop\\MicroServiceAppUdemy\\MicroServicesApp\\src\\Ordering\\Ordering.Core\\Ordering.Core.csproj"
@@ -5086,8 +5086,8 @@
       }
     },
     "frameworks": {
-      "netcoreapp3.1": {
-        "targetAlias": "netcoreapp3.1",
+      "net5.0": {
+        "targetAlias": "net5.0",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",

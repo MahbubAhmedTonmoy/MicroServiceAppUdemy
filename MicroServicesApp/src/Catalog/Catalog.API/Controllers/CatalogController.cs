@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Threading.Tasks;
-using Catalog.API.Entities;
+﻿using Catalog.API.Entities;
 using Catalog.API.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net;
+using MongoDB.Driver;
 
 namespace Catalog.API.Controllers
 {
@@ -24,18 +23,18 @@ namespace Catalog.API.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Product>>> GetProducts()
+        public ActionResult<IEnumerable<Product>> GetProducts()
         {
-            var products = await _repository.GetProducts();
+            var products = _repository.GetItems<Product>().ToList();
             return Ok(products);
         }
 
         [HttpGet("{id:length(24)}", Name = "GetProduct")]
         [ProducesResponseType((int)HttpStatusCode.NotFound)]
         [ProducesResponseType(typeof(Product), (int)HttpStatusCode.OK)]
-        public async Task<ActionResult<Product>> GetProduct(string id)
+        public ActionResult<Product> GetProduct(string id)
         {
-            var product = await _repository.GetProduct(id);
+            var product = _repository.GetItem<Product>(x => x.Id == id);
 
             if (product == null)
             {
@@ -49,33 +48,41 @@ namespace Catalog.API.Controllers
         [Route("[action]/{category}")]
         [HttpGet]
         [ProducesResponseType(typeof(Product), (int)HttpStatusCode.OK)]
-        public async Task<ActionResult<IEnumerable<Product>>> GetProductByCategory(string category)
+        public ActionResult<IEnumerable<Product>> GetProductByCategory(string category)
         {
-            var product = await _repository.GetProductByCategory(category);
+            var product = _repository.GetItem<Product>(x => x.Category == category);
             return Ok(product);
         }
 
         [HttpPost]
         [ProducesResponseType(typeof(Product), (int)HttpStatusCode.Created)]
-        public async Task<ActionResult<Product>> CreateProduct([FromBody] Product product)
+        public ActionResult<Product> CreateProduct([FromBody] Product product)
         {
-            await _repository.Create(product);
+            _repository.Save<Product>(product);
 
             return CreatedAtRoute("GetProduct", new { id = product.Id }, product);
         }
 
         [HttpPut]
         [ProducesResponseType(typeof(Product), (int)HttpStatusCode.OK)]
-        public async Task<IActionResult> UpdateProduct([FromBody] Product value)
+        public IActionResult UpdateProduct([FromBody] Product value)
         {
-            return Ok(await _repository.Update(value));
+            var collection = ((ProductRepository)this._repository).GetCollection<Product>();
+            var filter = Builders<Product>.Filter.Eq(x => x.Id, value.Id);
+            var set = Builders<Product>.Update.Set(x => x.ImageFile, value.ImageFile)
+                .Set(x => x.Name, value.Name).Set(x => x.Summary, value.Summary);
+            var result = collection.UpdateMany(filter, set);
+            return Ok(result.ModifiedCount);
         }
 
         [HttpDelete("{id:length(24)}")]
         [ProducesResponseType(typeof(void), (int)HttpStatusCode.OK)]
-        public async Task<IActionResult> DeleteProductById(string id)
+        public IActionResult DeleteProductById(string id)
         {
-            return Ok(await _repository.Delete(id));
+            var collection = ((ProductRepository)this._repository).GetCollection<Product>();
+            var filter = Builders<Product>.Filter.Eq(x => x.Id, id);
+            var result = collection.DeleteOne(filter);
+            return Ok(result.DeletedCount);
         }
 
     }
