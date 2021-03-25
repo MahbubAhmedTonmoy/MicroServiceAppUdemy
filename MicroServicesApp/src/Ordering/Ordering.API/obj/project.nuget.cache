@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "aEsq17nf/rbC+2FsONqvbJwrAiVOEvVT12OYpPTrEqJLJ4hMltt+vVu2ptjyvjGLC8IHqn74cQAhWG59J9JAKA==",
+  "dgSpecHash": "cJybnUTU1eUJhLKdl22Aez6Fy9on6E2hV0iACxzsf/t/j8akDdS2AicEzA3YFAwUaTre4ADm/+fWcRWdjlogkQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\ahmed.mahbub\\Desktop\\MicroServiceAppUdemy\\MicroServicesApp\\src\\Ordering\\Ordering.API\\Ordering.API.csproj",
   "expectedPackageFiles": [
@@ -38,7 +38,7 @@
     "C:\\Users\\ahmed.mahbub\\.nuget\\packages\\microsoft.openapi\\1.1.4\\microsoft.openapi.1.1.4.nupkg.sha512",
     "C:\\Users\\ahmed.mahbub\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.8\\microsoft.visualstudio.azure.containers.tools.targets.1.10.8.nupkg.sha512",
     "C:\\Users\\ahmed.mahbub\\.nuget\\packages\\microsoft.win32.registry\\4.5.0\\microsoft.win32.registry.4.5.0.nupkg.sha512",
-    "C:\\Users\\ahmed.mahbub\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\ahmed.mahbub\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\ahmed.mahbub\\.nuget\\packages\\rabbitmq.client\\6.2.1\\rabbitmq.client.6.2.1.nupkg.sha512",
     "C:\\Users\\ahmed.mahbub\\.nuget\\packages\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",
     "C:\\Users\\ahmed.mahbub\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",

@@ -87,7 +87,17 @@ namespace Basket.API.Data
 
 		private T GetObjectFromString<T>(string stringData)
 		{
-			return JsonConvert.DeserializeObject<T>(stringData);
+            try
+            {
+				var type = typeof(T).Name;
+                var result = JsonConvert.DeserializeObject<T>(stringData);
+                return result;
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
 		}
 	}
 }
