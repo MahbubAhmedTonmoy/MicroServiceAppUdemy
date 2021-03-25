@@ -38,7 +38,7 @@ namespace Basket.API
                 var configuration = ConfigurationOptions.Parse(Configuration.GetConnectionString("Redis"), true);
                 return ConnectionMultiplexer.Connect(configuration);
             });
-            services.AddTransient<IBasketContext, BasketContext>();
+            services.AddTransient<ICacheStore, CacheStore>();
             services.AddTransient<IBasketRepository, BasketRepository>();
 
 

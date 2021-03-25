@@ -11,29 +11,30 @@ namespace Basket.API.Repositories
 {
     public class BasketRepository : IBasketRepository
     {
-        private readonly IBasketContext _contest;
-        public BasketRepository(IBasketContext contest)
+        private readonly ICacheStore _contest;
+        public BasketRepository(ICacheStore contest)
         {
             _contest = contest;
         }
         public async Task<bool> DeleteBasket(string userName)
         {
-            return await _contest.Redis.KeyDeleteAsync(userName);
+            return await _contest.RemoveAsync(userName);
         }
 
         public async Task<BasketCart> GetBasketCart(string userName)
         {
-            var basket = await _contest.Redis.StringGetAsync(userName);
-            if (basket.IsNullOrEmpty)
+            var basket = await _contest.GetValueAsync<BasketCart>(userName);
+            if (basket == null)
             {
                 return null;
             }
-            return JsonConvert.DeserializeObject<BasketCart>(basket);
+            return basket;
+            //return JsonConvert.DeserializeObject<BasketCart>(basket);
         }
 
         public async Task<BasketCart> UpdateBasket(BasketCart basketCart)
         {
-            var update = await _contest.Redis.StringSetAsync(basketCart.UserName, JsonConvert.SerializeObject(basketCart));
+            var update = await _contest.AddAsync(basketCart.UserName, JsonConvert.SerializeObject(basketCart));
             if (!update)
             {
                 return null;

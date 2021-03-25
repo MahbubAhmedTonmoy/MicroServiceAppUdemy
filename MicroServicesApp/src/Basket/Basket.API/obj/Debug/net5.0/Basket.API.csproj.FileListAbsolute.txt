@@ -9,7 +9,6 @@ C:\Users\ahmed.mahbub\Desktop\MicroServiceAppUdemy\MicroServicesApp\src\Basket\B
 C:\Users\ahmed.mahbub\Desktop\MicroServiceAppUdemy\MicroServicesApp\src\Basket\Basket.API\bin\Debug\net5.0\Basket.API.pdb
 C:\Users\ahmed.mahbub\Desktop\MicroServiceAppUdemy\MicroServicesApp\src\Basket\Basket.API\bin\Debug\net5.0\AutoMapper.dll
 C:\Users\ahmed.mahbub\Desktop\MicroServiceAppUdemy\MicroServicesApp\src\Basket\Basket.API\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
-C:\Users\ahmed.mahbub\Desktop\MicroServiceAppUdemy\MicroServicesApp\src\Basket\Basket.API\bin\Debug\net5.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\ahmed.mahbub\Desktop\MicroServiceAppUdemy\MicroServicesApp\src\Basket\Basket.API\bin\Debug\net5.0\Microsoft.OpenApi.dll
 C:\Users\ahmed.mahbub\Desktop\MicroServiceAppUdemy\MicroServicesApp\src\Basket\Basket.API\bin\Debug\net5.0\Newtonsoft.Json.dll
 C:\Users\ahmed.mahbub\Desktop\MicroServiceAppUdemy\MicroServicesApp\src\Basket\Basket.API\bin\Debug\net5.0\Pipelines.Sockets.Unofficial.dll
