@@ -17,6 +17,14 @@ services:
     restart: always
     ports:
         - "6379:6379"
+  orderdb:
+    image: mcr.microsoft.com/mssql/server
+    container_name : orderdb
+    ports:
+        - "1433:1433"
+    environment:
+        SA_PASSWORD: "r00t.R00T"
+        ACCEPT_EULA: "Y"
 
   rabbitmq:
     image: rabbitmq:3-management-alpine
@@ -28,6 +36,7 @@ services:
 
   catalog.api:
     image: ${DOCKER_REGISTRY-}catalogapi
+    container_name: CatalogMicroservice
     build:
       context: .
       dockerfile: src/Catalog/Catalog.API/Dockerfile
@@ -45,6 +54,7 @@ services:
 
   basket.api:
     image: ${DOCKER_REGISTRY-}basketapi
+    container_name: BasketgMicroservice
     build:
       context: .
       dockerfile: src/Basket/Basket.API/Dockerfile
@@ -60,3 +70,40 @@ services:
         - ${HOME}/.aspnet/https:/root/.aspnet/https/
     ports:
         - "8001:80"
+
+  ordering.api:
+    image: ${DOCKER_REGISTRY-}orderingapi
+    container_name: OrderingMicroservice
+    build:
+      context: .
+      dockerfile: src/Ordering/Ordering.API/Dockerfile
+    restart: on-failure
+    environment:
+        - ASPNETCORE_ENVIRONMENT=Development
+        - "ConnectionStrings:OrderConnection=Server=orderdb;Database=OrderDb;User Id=sa;Password=r00t.R00T"
+        - "EventBus:HostName=rabbitmq"
+    depends_on:
+        - orderdb
+        - rabbitmq
+    volumes:
+        - ${HOME}/.microsoft/usersecrets/:/root/.microsoft/usersecrets
+        - ${HOME}/.aspnet/https:/root/.aspnet/https/
+    ports:
+        - "8002:80"
+
+  apigateway:
+    image: ${DOCKER_REGISTRY-}apigateway
+    build:
+      context: .
+      dockerfile: src/ApiGateway/OcelotAPIGateway/Dockerfile
+    environment:
+        - ASPNETCORE_ENVIRONMENT=Development
+    depends_on:
+        - catalog.api
+        - basket.api
+        - ordering.api
+    volumes:
+        - ${HOME}/.microsoft/usersecrets/:/root/.microsoft/usersecrets
+        - ${HOME}/.aspnet/https:/root/.aspnet/https/
+    ports:
+        - "7000:80"

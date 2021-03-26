@@ -92,7 +92,7 @@ namespace Ordering.API
             {
                 endpoints.MapControllers();
             });
-            app.UseRabbitMQListener();
+            app.UseRabbitMQListener();  // rabbitmq extention method ApplicationBuilderExtention
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {

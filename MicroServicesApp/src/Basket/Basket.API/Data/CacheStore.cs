@@ -90,7 +90,10 @@ namespace Basket.API.Data
             try
             {
 				var type = typeof(T).Name;
-                var result = JsonConvert.DeserializeObject<T>(stringData);
+                var result = JsonConvert.DeserializeObject<T>(stringData, new JsonSerializerSettings
+				{
+					NullValueHandling = NullValueHandling.Ignore
+				});
                 return result;
             }
             catch (Exception ex)

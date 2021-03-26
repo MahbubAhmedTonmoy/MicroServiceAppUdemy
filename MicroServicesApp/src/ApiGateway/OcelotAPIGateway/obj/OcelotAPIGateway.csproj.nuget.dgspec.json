@@ -48,7 +48,7 @@
             },
             "Ocelot": {
               "target": "Package",
-              "version": "[15.0.7, )"
+              "version": "[17.0.0, )"
             }
           },
           "imports": [

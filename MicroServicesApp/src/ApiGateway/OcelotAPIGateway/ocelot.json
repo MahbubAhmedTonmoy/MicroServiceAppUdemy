@@ -2,16 +2,16 @@
   "ReRoutes": [
     //Catalog API
     {
-      "DownstreamPathTemplate": "/api/v1/Catalog",
+      "DownstreamPathTemplate": "/api/v1/Catalog",  // end point of catalog microservice
       "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
+      "DownstreamHostAndPorts": [  // location of catalog microservice
         {
           "Host": "catalogapi",
           "Port": "80"
         }
       ],
-      "UpstreamPathTemplate": "/Catalog",
-      "UpstreamHttpMethod": [ "GET", "POST", "PUT" ]
+      "UpstreamPathTemplate": "/Catalog",    // requested by the client using this path
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT" ]  // supported http method
     },
     {
       "DownstreamPathTemplate": "/api/v1/Catalog/{id}",
@@ -89,3 +89,15 @@
     }
   ]
 }
+
+
+/*
+  some features of ocelot
+   - Routing
+   - Request Aggregation
+   - WebSockets
+   - Authentication
+   - Authorization
+   - Caching
+   - Load Balancing
+*/

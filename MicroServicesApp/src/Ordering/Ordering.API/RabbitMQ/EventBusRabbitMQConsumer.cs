@@ -39,7 +39,7 @@ namespace Ordering.API.RabbitMQ
 
             consumer.Received += Consumer_Received;  //delegate : placeholder for an EVENT , method pointer 
 
-            channel.BasicConsume(EventBusConstants.BasketCheckoutQueue, true, consumer);
+            channel.BasicConsume(queue: EventBusConstants.BasketCheckoutQueue,autoAck: true,consumer: consumer, noLocal: false, exclusive: false, arguments: null);
         }
 
         private async void Consumer_Received(object sender, BasicDeliverEventArgs e)
