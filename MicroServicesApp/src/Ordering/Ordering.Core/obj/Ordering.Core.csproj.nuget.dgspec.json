@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ahmed.mahbub\\Desktop\\MicroServiceAppUdemy\\MicroServicesApp\\src\\Ordering\\Ordering.Core\\Ordering.Core.csproj": {}
+    "E:\\Mahbub\\MicroServiceAppUdemy\\MicroServicesApp\\src\\Ordering\\Ordering.Core\\Ordering.Core.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ahmed.mahbub\\Desktop\\MicroServiceAppUdemy\\MicroServicesApp\\src\\Ordering\\Ordering.Core\\Ordering.Core.csproj": {
+    "E:\\Mahbub\\MicroServiceAppUdemy\\MicroServicesApp\\src\\Ordering\\Ordering.Core\\Ordering.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ahmed.mahbub\\Desktop\\MicroServiceAppUdemy\\MicroServicesApp\\src\\Ordering\\Ordering.Core\\Ordering.Core.csproj",
+        "projectUniqueName": "E:\\Mahbub\\MicroServiceAppUdemy\\MicroServicesApp\\src\\Ordering\\Ordering.Core\\Ordering.Core.csproj",
         "projectName": "Ordering.Core",
-        "projectPath": "C:\\Users\\ahmed.mahbub\\Desktop\\MicroServiceAppUdemy\\MicroServicesApp\\src\\Ordering\\Ordering.Core\\Ordering.Core.csproj",
+        "projectPath": "E:\\Mahbub\\MicroServiceAppUdemy\\MicroServicesApp\\src\\Ordering\\Ordering.Core\\Ordering.Core.csproj",
         "packagesPath": "C:\\Users\\ahmed.mahbub\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ahmed.mahbub\\Desktop\\MicroServiceAppUdemy\\MicroServicesApp\\src\\Ordering\\Ordering.Core\\obj\\",
+        "outputPath": "E:\\Mahbub\\MicroServiceAppUdemy\\MicroServicesApp\\src\\Ordering\\Ordering.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ahmed.mahbub\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -56,7 +56,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

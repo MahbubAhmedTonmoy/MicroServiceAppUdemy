@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2GPhkTNJDhO2BFHzJkNEcU5jxdMwsQEWZ59jPC+oHb38dahG+lJoZy/gqIZRpeAKH9WalLN+/ru1+cV18X8VCA==",
+  "dgSpecHash": "/2iAB92DS7Oiqn65C0JXewt/2W6meYKF04hzXJOSYyrdZIUaVokLtFYbAutMy9aY2u7W9chZdTw8gW/auBMEEg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ahmed.mahbub\\Desktop\\MicroServiceAppUdemy\\MicroServicesApp\\src\\Common\\EventBusRabbitMQ\\EventBusRabbitMQ.csproj",
+  "projectFilePath": "E:\\Mahbub\\MicroServiceAppUdemy\\MicroServicesApp\\src\\Common\\EventBusRabbitMQ\\EventBusRabbitMQ.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ahmed.mahbub\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\ahmed.mahbub\\.nuget\\packages\\rabbitmq.client\\6.2.1\\rabbitmq.client.6.2.1.nupkg.sha512",

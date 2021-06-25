@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "w4F+bcNPQ57m0jeFOAXC1NYgmARnNpozpLTbYX3FRoxxE0HTgPzC374aMiXik1O766TbadsgCGeVvRbroqlZlA==",
+  "dgSpecHash": "gF3g2u5E5qitlOa1BUG8PNIpJoW7rLbBanQ55euucsnvgSNtQB8TmpUuwmgYbbWYCu8dU7hOOccibVmKDKt8Vg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ahmed.mahbub\\Desktop\\MicroServiceAppUdemy\\MicroServicesApp\\src\\Ordering\\Ordering.Core\\Ordering.Core.csproj",
+  "projectFilePath": "E:\\Mahbub\\MicroServiceAppUdemy\\MicroServicesApp\\src\\Ordering\\Ordering.Core\\Ordering.Core.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

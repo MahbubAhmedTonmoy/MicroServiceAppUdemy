@@ -479,11 +479,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ahmed.mahbub\\Desktop\\MicroServiceAppUdemy\\MicroServicesApp\\src\\ApiGateway\\OcelotAPIGateway\\OcelotAPIGateway.csproj",
+      "projectUniqueName": "E:\\Mahbub\\MicroServiceAppUdemy\\MicroServicesApp\\src\\ApiGateway\\OcelotAPIGateway\\OcelotAPIGateway.csproj",
       "projectName": "OcelotAPIGateway",
-      "projectPath": "C:\\Users\\ahmed.mahbub\\Desktop\\MicroServiceAppUdemy\\MicroServicesApp\\src\\ApiGateway\\OcelotAPIGateway\\OcelotAPIGateway.csproj",
+      "projectPath": "E:\\Mahbub\\MicroServiceAppUdemy\\MicroServicesApp\\src\\ApiGateway\\OcelotAPIGateway\\OcelotAPIGateway.csproj",
       "packagesPath": "C:\\Users\\ahmed.mahbub\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ahmed.mahbub\\Desktop\\MicroServiceAppUdemy\\MicroServicesApp\\src\\ApiGateway\\OcelotAPIGateway\\obj\\",
+      "outputPath": "E:\\Mahbub\\MicroServiceAppUdemy\\MicroServicesApp\\src\\ApiGateway\\OcelotAPIGateway\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ahmed.mahbub\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -541,7 +541,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }
