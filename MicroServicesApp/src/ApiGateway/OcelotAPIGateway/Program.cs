@@ -21,8 +21,13 @@ namespace OcelotAPIGateway
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
+                })
+                .ConfigureLogging((hostingContext, loggingbuilder)=>{
+                    loggingbuilder.AddConfiguration(hostingContext.Configuration.GetSection("Logging"));
+                    loggingbuilder.AddConsole();
+                    loggingbuilder.AddConsole();
                 }).ConfigureAppConfiguration((hostingContext, config) => {
-                    config.AddJsonFile($"ocelot.json");
+                    config.AddJsonFile($"ocelot.{hostingContext.HostingEnvironment.EnvironmentName}.json",true,true);
                 });
     }
 }

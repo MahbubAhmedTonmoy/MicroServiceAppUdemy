@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using MongoDB.Driver;
+using System;
 
 namespace Catalog.API.Controllers
 {
@@ -58,6 +59,7 @@ namespace Catalog.API.Controllers
         [ProducesResponseType(typeof(Product), (int)HttpStatusCode.Created)]
         public ActionResult<Product> CreateProduct([FromBody] Product product)
         {
+            product.Id = Guid.NewGuid().ToString();
             _repository.Save<Product>(product);
 
             return CreatedAtRoute("GetProduct", new { id = product.Id }, product);

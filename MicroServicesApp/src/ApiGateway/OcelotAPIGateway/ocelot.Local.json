@@ -1,0 +1,116 @@
+﻿//{
+//  "Catalog": null,
+//  "http": null, //localhost:8000/swagger/index.html api/v1/catalog -> //localhost:5010/catalog
+//  "Basket": null,
+//  "http": null, //localhost:8001/swagger/index.html api/v1/Basket  ->//localhost:5010/Basket
+//  "Discount": null,
+//  "http": null, //localhost:8002/swagger/index.html api/v1/Discount ->//localhost:5010/Discount
+//  "Ordering": null,
+//  "http": //localhost:8004/swagger/index.html  api/v1/Ordering     ->//localhost:5010/Ordering
+//}
+{
+  "Routes": [
+    //Catalog API
+    {
+      "DownstreamPathTemplate": "/api/v1/Catalog", // end point of catalog microservice internal
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [ // location of catalog microservice
+        {
+          "Host": "localhost",
+          "Port": "8000"
+        }
+      ],
+      "UpstreamPathTemplate": "/Catalog", // requested by the client using this path
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT" ] // supported http method
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/Catalog/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "8000"
+        }
+      ],
+      "UpstreamPathTemplate": "/Catalog/{id}",
+      "UpstreamHttpMethod": [ "GET", "DELETE" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/Catalog/GetProductByCategory/{category}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "8000"
+        }
+      ],
+      "UpstreamPathTemplate": "/Catalog/GetProductByCategory/{category}",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    //Basket API
+    {
+      "DownstreamPathTemplate": "/api/v1/Basket",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "8001"
+        }
+      ],
+      "UpstreamPathTemplate": "/Basket",
+      "UpstreamHttpMethod": [ "GET", "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/Basket/{userName}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "8001"
+        }
+      ],
+      "UpstreamPathTemplate": "/Basket/{userName}",
+      "UpstreamHttpMethod": [ "DELETE" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/Basket/Checkout",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "8001"
+        }
+      ],
+      "UpstreamPathTemplate": "/Basket/Checkout",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    //Order API
+    {
+      "DownstreamPathTemplate": "/api/v1/Order/",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "8004"
+        }
+      ],
+      "UpstreamPathTemplate": "/Order/",
+      "UpstreamHttpMethod": [ "GET" ]
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl" :  "http://localhost:5010"
+  }
+}
+
+
+/*
+  some features of ocelot
+   - Routing
+   - Request Aggregation
+   - WebSockets
+   - Authentication
+   - Authorization
+   - Caching
+   - Load Balancing
+*/
